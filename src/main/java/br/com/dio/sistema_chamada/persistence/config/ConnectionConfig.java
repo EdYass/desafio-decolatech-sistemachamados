@@ -10,11 +10,11 @@ import java.sql.SQLException;
 @NoArgsConstructor(access = PRIVATE)
 public final class ConnectionConfig {
     public static Connection getConnection() throws SQLException {
-        var url = "jdbc:mysql://localhost/board";
+        var url = "jdbc:mysql://localhost/sistemachamados";
         var user = "root";
         var password = "836363";
         var connection = DriverManager.getConnection(url, user, password);
-        connection.setAutoCommit(false);
+        connection.setAutoCommit(true);
         return connection;
     }
 }
